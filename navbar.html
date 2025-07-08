@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Navbar Dinámico</title>
+    <link rel="stylesheet" href="/css/navbar.css" />
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="nav-conten">
+        <div class="nav-img-logo">
+          <a href="index.html">
+            <img class="logo-unis" src="./image/navbar/logoverde.png" alt="Logo-Unisphere" />
+          </a>
+        </div>
+
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="nav-sections">
+          <a class="nav-link" href="index.html"><span>Home</span></a>
+          <a class="nav-link" href="DigitalMarketing.html"><span>Services</span></a>
+          <a class="nav-link" href="Portfolio.html"><span>Portfolio</span></a>
+          <a class="nav-link" href="Insights.html"><span>Insights</span></a>
+          <a class="nav-link" href="AboutUs.html"><span>About Us</span></a>
+          
+        </div>
+
+        <div class="nav-social">
+          <a class="nav-link" href="ContactUs.html"><span>Contact Us</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const links = document.querySelectorAll('.nav-link');
+      const path = window.location.pathname;
+
+      links.forEach((link) => {
+        const href = link.getAttribute('href');
+
+        // Verifica si la ruta termina con el href
+        if (path.endsWith(href)) {
+          link.classList.add('active');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+.home {
+  position: relative; /* Cambié absolute por relative para que pueda adaptarse */
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-page {
+  height: 1080px;
+  left: -8.5%;
+  position: relative;
+  width: 15%;
+  z-index: 1;
+}
+
+.conten-log {
+  position: relative;
+  top: 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 260px;
+  border-radius: 25px;
+  gap: 1.2rem;
+}
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1080px;
+}
+
+
+.img-title {
+  width: 101%;
+  position: relative;
+  top: -19%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  z-index: 1;
+  left: -25%;
+}
+
+.innovate {
+  width: 80%;
+}
+
+.get-in-touch {
+  width: 100%;
+}
+
+.home-globe {
+  position: relative;
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.globe {
+  position: relative;
+  right: -9.7%;
+  width: 200%;
+  max-width: 1080px;
+  height: auto;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+/*  */
+
+/* 💻 TABLET */
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .home-page {
+    width: 100%;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .conten-log {
+    flex-direction: row;
+    gap: 1rem;
+    height: auto;
+    width: auto;
+  }
+
+  .home-title {
+    width: 100%;
+    text-align: center;
+    order: 1;
+  }
+
+  .img-title {
+    position: relative;
+    left: 0;
+    align-items: center;
+  }
+
+  .home-globe {
+    width: 100%;
+    order: 3;
+    margin-top: 30px;
+  }
+
+  .globe {
+    width: 90%;
+    position: relative;
+  }
+}
+
+/* 📱 CELULAR */
+@media (max-width: 768px) {
+  .home {
+    padding: 0 10px;
+  }
+
+  .home-page {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .conten-log {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .img-title img,
+  .get-in-touch {
+    width: 90%;
+  }
+
+  .our-img-carrucel img {
+    max-width: 80px;
+  }
+
+  .ourpart {
+    font-size: 16px;
+  }
+}

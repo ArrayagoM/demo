@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap');
+
+.footer * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #111;
+  color: #ccc;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  margin: 0 10px;
+}
+
+.logo-col {
+  max-width: 250px;
+}
+
+.conten-logo-footer img {
+  width: 150px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.conten-social-footer {
+  display: flex;
+  gap: 15px;
+}
+
+.conten-social-footer img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s, transform 0.3s;
+}
+
+.conten-social-footer img:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+/* TITULOS */
+.footer-col h4 {
+  font-family: 'Gabarito', sans-serif;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* LISTAS */
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+/* ——— ENLACES CON ANIMACIÓN DE SUBRAYADO ——— */
+.footer-col ul li a {
+  font-family: 'Gabarito', sans-serif;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: color 0.3s;
+}
+
+/* animación underline al hover */
+.footer-col ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background-color: #00bfff; /* línea azul clarito */
+  transition: width 0.3s ease-in-out;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-col ul li a:hover::after {
+  width: 100%;
+}
+
+/* ZONA COPYRIGHT */
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-bottom h5 {
+  font-size: 13px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .conten-social-footer {
+    justify-content: center;
+  }
+}

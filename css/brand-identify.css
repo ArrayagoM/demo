@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap');
+
+.brand-identify {
+  width: 1920px;
+  height: 1043px;
+  background: #1064d7;
+  color: #fff;
+  padding: 5rem 2rem 2rem;
+  font-family: 'Gabarito', sans-serif;
+}
+
+/* HEADER: icono + título, alineados centrados */
+.brand-header {
+  display: inline-flex;
+  position: relative;
+  left: 8%;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.brand-header .icon {
+  width: 79px;
+  height: 79px;
+}
+.brand-title-text h2 {
+  text-shadow: 0px 10px 40px black;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+.brand-title-text p {
+  font-size: 1rem;
+  color: #d1e4ff;
+  margin: 0;
+}
+
+/* GRID: siempre 3x2 */
+.cards-container {
+  position: relative;
+  width: 83%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.5rem;
+  margin: 0 auto;
+}
+
+/* CARD: fondo, sombras y glow exactos */
+.card {
+  position: relative;
+  background: #1976d2;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow:
+    /* glow difuso alrededor */ 0 0 20px rgba(25, 118, 210, 0.6),
+    /* sombra profunda */ 0 20px 40px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover clavado */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 10px -10px 30px rgba(163, 197, 231, 0.8), 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* número circular arriba izq */
+.circle {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 30px;
+  height: 30px;
+  background: #0d3a91;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* icono dentro de su círculo blanco + glow */
+.conten-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* sombra alrededor para el glow blureado */
+  box-shadow: 0 0 15px rgba(0, 86, 197, 0.5);
+}
+.card-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* textos dentro de la card */
+.card h3 {
+  margin-top: 2.5rem;
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.card p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+
+  color: rgba(135, 182, 236, 0.788);
+}
+
+/* FOOTER “Get a free consultation” */
+.consultation {
+  margin-top: 12rem;
+  text-align: center;
+}
+.consultation p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2.5rem;
+  color: #e0eaff;
+}
+.consultation img {
+  width: 42px;
+  height: 42px;
+}
+.consultation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #fff;
+  transition: color 0.2s ease;
+}
+.consultation a:hover {
+  color: #cde1ff;
+}
+
+/* RESPONSIVE: pasa a 2 columnas y luego 1 */
+@media (max-width: 992px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .brand-header {
+    flex-direction: column;
+  }
+}

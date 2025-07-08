@@ -1,0 +1,103 @@
+.metrics {
+    position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 50px 80px;
+  background-color: #eeeeee;
+  font-family: sans-serif;
+  margin-top: -1.5%;
+  flex-wrap: wrap; /* para que puedan bajar los elementos si no entran */
+  gap:1%; /* para que no queden pegados si hay wrap */
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 18%;
+}
+
+.metrics-title {
+  color: #0f6cd8;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.number-container {
+  display: flex;
+  align-items: baseline;
+  font-weight: 900;
+  font-size: 80px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.metric-number {
+  display: inline-block;
+  text-shadow: -2px 2px 6px ;
+}
+
+.suffix {
+  font-size: 70px;
+  margin-left: 5px;
+}
+
+.metric-p {
+  color: #7c7c7c;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* 🔽 TABLETS - max-width: 1024px */
+@media (max-width: 1024px) {
+  .metrics {
+    padding: 40px 40px;
+    gap: 20px;
+  }
+
+  .metric-box {
+    width: 45%;
+  }
+
+  .number-container {
+    font-size: 60px;
+  }
+
+  .suffix {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .metrics {
+    flex-direction: column;
+    padding: 30px 20px;
+    align-items: center;
+  }
+
+  .metric-box {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .metrics-title {
+    font-size: 16px;
+  }
+
+  .number-container {
+    font-size: 50px;
+    justify-content: center;
+  }
+
+  .suffix {
+    font-size: 45px;
+  }
+
+  .metric-p {
+    font-size: 13px;
+  }
+}

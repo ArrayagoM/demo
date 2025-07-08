@@ -1,0 +1,173 @@
+/* 1. Contenedor general */
+.services {
+  position: relative;
+  padding: 4rem 2rem;
+  background: #f8f9fa url('../image/digital/bacgrou.png') center top no-repeat;
+  background-size: 1920px 700px;
+  overflow: hidden;
+}
+
+/* 2. Cabecera */
+.services-header {
+  position: relative;
+  top: -5%;
+  left: 7%;
+  max-width: 770px;
+  text-align: center;
+}
+.digital-title {
+  text-align: start;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.507);
+  width: 800px;
+  height: 200px;
+  font-size: 6.5rem;
+  color: #111;
+}
+.digital-p {
+  width: 50%;
+  font-size: 1rem;
+  text-align: start;
+  margin-top: -3%;
+  color: #555;
+}
+
+.digital-span {
+  position: absolute;
+  left: 0%;
+  top: 70%;
+  margin-top: 20%;
+  text-align: start;
+  font-size: 24px;
+  font-weight: 600;
+  color: #777;
+}
+
+/* 
+.services-header p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+} */
+/* .services-header span {
+  margin-top: 15%;
+  font-size: 0.9rem;
+  color: #777;
+} */
+
+/* 3. Grid de tarjetas */
+.services-grid {
+  background-color: white;
+  box-shadow: 0px 0px 80px 120px white;
+  margin-top: 11%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 2rem;
+  justify-content: center;
+}
+
+/* 4. Tarjeta individual */
+.service-card {
+  margin-top: -3%;
+  width: 700px;
+  height: 350px;
+  background: #fff;
+  /* Eliminamos el border-color normal */
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s;
+
+  border-image-source: linear-gradient(
+    to bottom,
+    #e0e0e09c 35%,
+    #e0e0e06e 50%,
+    #e0e0e01f 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1;
+}
+
+/* 4.1 Título dentro de tarjeta */
+.service-card h3 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* 4.2 Lista */
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+.service-card li {
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: #444;
+  position: relative;
+  padding-left: 1.2rem;
+}
+.service-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #17a2b8;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* 5. Animación al hacer scroll (clase que JS añade) */
+.service-card.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* 6. Hover en tarjeta – reemplaza por esto */
+.service-card:hover {
+  transition: 0.5s;
+  transform: translateY(-5px) scale(1.05) !important;
+  opacity: 1 !important;
+  border-radius: 0%;
+  border: 2px solid rgba(0, 0, 0, 0.267);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.411) !important;
+}
+
+/* 7. Delay personalizado */
+.service-card[data-delay='0'] {
+  transition-delay: 0.1s;
+}
+.service-card[data-delay='100'] {
+  transition-delay: 0.2s;
+}
+.service-card[data-delay='200'] {
+  transition-delay: 0.3s;
+}
+.service-card[data-delay='300'] {
+  transition-delay: 0.4s;
+}
+.service-card[data-delay='400'] {
+  transition-delay: 0.5s;
+}
+.service-card[data-delay='500'] {
+  transition-delay: 0.6s;
+}
+.service-card[data-delay='600'] {
+  transition-delay: 0.7s;
+}
+.service-card[data-delay='700'] {
+  transition-delay: 0.8s;
+}
+
+/* 8. Media query para títulos más chicos en móvil */
+@media (max-width: 600px) {
+  .services-header h2 {
+    font-size: 2rem;
+  }
+}

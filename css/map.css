@@ -1,0 +1,82 @@
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* Panel del mapa */
+.map-panel {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Ajusta según necesites */
+}
+
+/* Contenedor del mapa */
+.map-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1; /* Mantiene proporción del mapa */
+}
+
+/* Estilos del mapa base */
+.world-map {
+position: relative;
+left: 34.79%;
+}
+
+/* Marcadores */
+.marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url('/image/home/marcador.png') no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
+.marker.big {
+  width: 32px;
+  height: 32px;
+}
+
+.marker:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+/* Tooltips */
+.marker::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  padding: 6px 12px;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.marker:hover::after {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+  margin-bottom: 8px;
+}
