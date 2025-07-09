@@ -1,6 +1,5 @@
 .metrics {
     position: relative;
-  z-index: 1000;
   display: flex;
   justify-content: center;
   padding: 50px 80px;

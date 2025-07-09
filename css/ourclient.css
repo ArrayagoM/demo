@@ -9,7 +9,6 @@
   align-items: center;
   justify-content: center;
   margin-top: -24.9%; /* Mueve todo el componente 40% hacia arriba */
-  z-index: 1000; /* Asegura que se superponga */
 }
 
 .carrucel {

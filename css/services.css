@@ -90,7 +90,7 @@
   bottom: -10px;
   background: inherit;
   filter: blur(20px);
-  z-index: -1;
+
 }
 .services-card-1 .services-title {
   width: 50%;
