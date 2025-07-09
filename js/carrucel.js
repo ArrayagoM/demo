@@ -66,11 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
     div.append(img);
     items.push(div);
   });
-  // duplica
+ 
   const allItems = [...items, ...items.map((i) => i.cloneNode(true))];
   allItems.forEach((i) => carousel.append(i));
 
-  // 2) Crear dots
+
   data.forEach((_, idx) => {
     const dot = document.createElement('div');
     dot.className = 'dot';
@@ -81,20 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Variables para controlar la pausa
   let isPaused = false;
   let pauseStartTime = 0;
-  const PAUSE_DURATION = 3000; // 3 segundos
+  const PAUSE_DURATION = 3000;
 
   // 3) Animación infinita con pausa
   let pos = 0;
-  const speed = 0.105; // px por frame
+  const speed = 0.105;
   function animate() {
     if (!isPaused) {
       pos -= speed;
       if (pos <= -carousel.scrollWidth / 2) pos = 0;
       carousel.style.transform = `translateX(${pos}px)`;
     } else {
-      // Si está en pausa, verifica si ya pasaron los 3 segundos
+      
       if (Date.now() - pauseStartTime >= PAUSE_DURATION) {
-        isPaused = false; // Reanuda la animación
+        isPaused = false;
       }
     }
     detectCenter();
@@ -126,7 +126,7 @@ function detectCenter() {
         item.querySelector('img').src = `./image/OurClient/${key}(azul).png`;
         showText(key);
 
-        // Activar pausa
+        
         isPaused = true;
         pauseStartTime = Date.now();
       }
@@ -140,7 +140,7 @@ function detectCenter() {
       <h3><strong>${info.title}</strong></h3> &nbsp; <em>${info.time}</em>
       <p>${info.desc}</p>
     `;
-    // dots
+    
     document.querySelectorAll('.dot').forEach((dot) => dot.classList.remove('active'));
     const idx = data.findIndex((d) => d.key === key);
     const dot = document.querySelector(`.dot[data-idx="${idx}"]`);
