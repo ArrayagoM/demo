@@ -7,14 +7,16 @@
   font-family: sans-serif;
   margin-top: -1.5%;
   flex-wrap: wrap; /* para que puedan bajar los elementos si no entran */
-  gap:1%; /* para que no queden pegados si hay wrap */
+  gap:-2%; /* para que no queden pegados si hay wrap */
 }
+
+
 
 .metric-box {
   display: flex;
   flex-direction: column;
   align-items: start;
-  width: 18%;
+  width: 17.7%;
 }
 
 .metrics-title {
