@@ -33,6 +33,7 @@
   border-radius: 25px;
   gap: 1.2rem;
   z-index: 2147483647 !important;
+  isolation: isolate;
 }
 
 .home-title {
