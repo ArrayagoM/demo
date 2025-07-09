@@ -1,6 +1,6 @@
 /* navbar.css */
 :root {
-  --primary-color: #0077b6;
+  --primary-color: rgba(15, 108, 216, 1);
   --text-color: #333;
   --navbar-height: 61px;
   --transition-speed: 0.3s;
