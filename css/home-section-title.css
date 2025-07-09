@@ -10,10 +10,13 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: -56.5%;
+  left: 15%;
 }
 
 .home-page {
   height: 1080px;
+  top: 1080px;
   left: -8.5%;
   position: relative;
   width: 15%;
@@ -50,8 +53,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
-
-  left: -25%;
+  left: 15%;
 }
 
 .innovate {
@@ -72,7 +74,7 @@
 
 .globe {
   position: relative;
-  right: -9.7%;
+  right: -21.995%;
   width: 200%;
   max-width: 1080px;
   height: auto;
