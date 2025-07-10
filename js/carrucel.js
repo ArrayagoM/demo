@@ -66,10 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
     div.append(img);
     items.push(div);
   });
- 
+
   const allItems = [...items, ...items.map((i) => i.cloneNode(true))];
   allItems.forEach((i) => carousel.append(i));
-
 
   data.forEach((_, idx) => {
     const dot = document.createElement('div');
@@ -92,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (pos <= -carousel.scrollWidth / 2) pos = 0;
       carousel.style.transform = `translateX(${pos}px)`;
     } else {
-      
       if (Date.now() - pauseStartTime >= PAUSE_DURATION) {
         isPaused = false;
       }
@@ -103,36 +101,35 @@ document.addEventListener('DOMContentLoaded', () => {
   animate();
 
   // 4) Detección de centro (con pausa)
-function detectCenter() {
-  const centerX = window.innerWidth / 2;
-  const TOLERANCE = 10; // Margen de error en píxeles (ajústalo según necesites)
-  
-  allItems.forEach((item) => {
-    const { left, width } = item.getBoundingClientRect();
-    const itemCenter = left + width / 2;
-    const distanceToCenter = Math.abs(itemCenter - centerX);
+  function detectCenter() {
+    const centerX = window.innerWidth / 2;
+    const TOLERANCE = 10; // Margen de error en píxeles (ajústalo según necesites)
 
-    // Solo activa si el centro del item está muy cerca del centro de la pantalla
-    if (distanceToCenter < TOLERANCE) {
-      const key = item.dataset.key;
-      if (!item.classList.contains('active')) {
-        // Desactivar todos
-        document.querySelectorAll('.carousel-item.active').forEach((e) => {
-          e.classList.remove('active');
-          e.querySelector('img').src = `./image/OurClient/${e.dataset.key}.png`;
-        });
-        // Activar este
-        item.classList.add('active');
-        item.querySelector('img').src = `./image/OurClient/${key}(azul).png`;
-        showText(key);
+    allItems.forEach((item) => {
+      const { left, width } = item.getBoundingClientRect();
+      const itemCenter = left + width / 2;
+      const distanceToCenter = Math.abs(itemCenter - centerX);
 
-        
-        isPaused = true;
-        pauseStartTime = Date.now();
+      // Solo activa si el centro del item está muy cerca del centro de la pantalla
+      if (distanceToCenter < TOLERANCE) {
+        const key = item.dataset.key;
+        if (!item.classList.contains('active')) {
+          // Desactivar todos
+          document.querySelectorAll('.carousel-item.active').forEach((e) => {
+            e.classList.remove('active');
+            e.querySelector('img').src = `./image/OurClient/${e.dataset.key}.png`;
+          });
+          // Activar este
+          item.classList.add('active');
+          item.querySelector('img').src = `./image/OurClient/${key}(azul).svg`;
+          showText(key);
+
+          isPaused = true;
+          pauseStartTime = Date.now();
+        }
       }
-    }
-  });
-}
+    });
+  }
   // 5) Mostrar texto y actualizar dots (sin cambios)
   function showText(key) {
     const info = data.find((d) => d.key === key);
@@ -140,7 +137,7 @@ function detectCenter() {
       <h3><strong>${info.title}</strong></h3> &nbsp; <em>${info.time}</em>
       <p>${info.desc}</p>
     `;
-    
+
     document.querySelectorAll('.dot').forEach((dot) => dot.classList.remove('active'));
     const idx = data.findIndex((d) => d.key === key);
     const dot = document.querySelector(`.dot[data-idx="${idx}"]`);
