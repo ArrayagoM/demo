@@ -95,37 +95,39 @@
 /* 5) Hover completo por color (Opción B) */
 .color-1:hover {
   background-color: var(--c1);
-  box-shadow: 0 12px 24px var(--c1), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  box-shadow: 0 12px 24px var(--c1),
+   inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
   transform: translateY(-4px);
 }
 .color-2:hover {
   background-color: var(--c2);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  box-shadow: 0 12px 24px var(--c2), 
+  inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
   transform: translateY(-4px);
 }
 .color-3:hover {
   background-color: var(--c3);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  box-shadow: 0 12px 24px var(--c3), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
   transform: translateY(-4px);
 }
 .color-4:hover {
   background-color: var(--c4);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  box-shadow: 0 12px 24px var(--c4), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
   transform: translateY(-4px);
 }
 .color-5:hover {
   background-color: var(--c5);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  box-shadow: 0 12px 24px var(--c5), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
   transform: translateY(-4px);
 }
 .color-6:hover {
   background-color: var(--c6);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  box-shadow: 0 12px 24px var(--c6), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
   transform: translateY(-4px);
 }
 .color-7:hover {
   background-color: var(--c7);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  box-shadow: 0 12px 24px var(--c7), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
   transform: translateY(-4px);
 }
 
