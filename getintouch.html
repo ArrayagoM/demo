@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <title>Get a Quote</title>
     <link rel="stylesheet" href="/css/maskgroup.css" />
-    <!-- Toastify CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- 🔁 MOVIDO ARRIBA -->
   </head>
   <body>
     <section class="maskgroup">
@@ -46,14 +47,13 @@
       </form>
     </section>
 
-    <!-- Toastify JS -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('quoteForm');
         const submitBtn = form.querySelector('button[type="submit"]');
 
         form.addEventListener('submit', async (e) => {
-          e.preventDefault();
+          e.preventDefault(); // evita recarga
 
           const formData = {
             name: form.name.value.trim(),
@@ -116,9 +116,5 @@
         });
       });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <!-- Script propio -->
-    <!-- <script src="/js/form.js"></script> -->
   </body>
 </html>
