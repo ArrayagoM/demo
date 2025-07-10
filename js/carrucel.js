@@ -48,6 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
       time: '2019 - Present',
       desc: 'Since 2019, we’ve helped UNDP enhance its digital presence through targeted campaigns, social media strategy, and content that drives global engagement and awareness.',
     },
+    {
+      key: 'bushra',
+      title: 'United Nations Development Programme (UNDP)',
+      time: '2019 - Present',
+      desc: 'Since 2019, we’ve helped UNDP enhance its digital presence through targeted campaigns, social media strategy, and content that drives global engagement and awareness.',
+    },
+    {
+      key: 'Muslm',
+      title: 'United Nations Development Programme (UNDP)',
+      time: '2019 - Present',
+      desc: 'Since 2019, we’ve helped UNDP enhance its digital presence through targeted campaigns, social media strategy, and content that drives global engagement and awareness.',
+    },
   ];
 
   const carousel = document.querySelector('.carousel');
@@ -61,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     div.className = 'carousel-item';
     div.dataset.key = item.key;
     const img = document.createElement('img');
-    img.src = `./image/OurClient/${item.key}.png`;
+    img.src = `./image/OurClient/${item.key}.png` || `./image/OurClient/${item.key}.svg`;
     img.alt = item.key;
     div.append(img);
     items.push(div);
@@ -84,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3) Animación infinita con pausa
   let pos = 0;
-  const speed = 0.105;
+  const speed = 0.505;
   function animate() {
     if (!isPaused) {
       pos -= speed;

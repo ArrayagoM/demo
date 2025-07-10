@@ -3,12 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap');
 
 .footer * {
-
-  margin: 0; padding: 0; box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 .footer {
   position: relative;
-  background: #111; color: #ccc;
+  background: #111;
+  color: #ccc;
   font-family: 'Gabarito', sans-serif;
   font-size: 14px;
 }
@@ -22,53 +25,54 @@
   margin: auto;
   padding: 60px 20px 40px;
 }
+
 .footer-col {
-  
   flex: 1 1 200px;
   margin: 0 10px;
 }
+
 .footer-col h4 {
-  color: #fff; font-size: 14px;
-  text-transform: uppercase; letter-spacing: .5px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   margin-bottom: 15px;
 }
+
 .footer-col ul {
   list-style: none;
 }
+
 .footer-col ul li {
   margin-bottom: 10px;
 }
+
 .footer-col ul li a {
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  position: relative; padding-bottom: 2px;
-  transition: color .3s;
+  transition: color 0.3s;
 }
-.footer-col ul li a::after {
-  content: ''; position: absolute;
-  bottom: 0; left: 0;
-  width: 0; height: 1px;
-  background: #00bfff;
-  transition: width .3s ease-in-out;
-}
+
 .footer-col ul li a:hover {
   color: #fff;
-}
-.footer-col ul li a:hover::after {
-  width: 100%;
 }
 
 /* iconos en Contact Us */
 .social-icons {
-  display: flex; gap: 15px; margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
 }
+
 .social-icons img {
-  width: 16px; height: 16px;
+  width: 16px;
+  height: 16px;
   filter: brightness(0) invert(1);
-  transition: opacity .2s, transform .3s;
+  transition: opacity 0.2s, transform 0.3s;
 }
+
 .social-icons img:hover {
-  opacity: .7;
+  opacity: 0.7;
   transform: scale(1.1);
 }
 
@@ -79,49 +83,51 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  max-width: 1200px; margin: auto;
+  max-width: 1200px;
+  margin: auto;
 }
+
 .bottom-left {
-  display: flex; align-items: center; gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
+
 .logo-bottom {
   width: 100px;
 }
+
 .legal-nav a {
   margin-right: 15px;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 13px;
   text-decoration: none;
-  position: relative; padding-bottom: 2px;
-  transition: color .3s;
+  transition: color 0.3s;
 }
-.legal-nav a::after {
-  content: ''; position: absolute;
-  bottom: 0; left: 0;
-  width: 0; height: 1px;
-  background: #00bfff;
-  transition: width .3s ease-in-out;
-}
+
 .legal-nav a:hover {
   color: #fff;
 }
-.legal-nav a:hover::after {
-  width: 100%;
-}
+
 .bottom-right span {
-  font-size: 13px; color: #777;
+  font-size: 13px;
+  color: #777;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .footer-top, .footer-bottom {
+  .footer-top,
+  .footer-bottom {
     flex-direction: column;
     text-align: center;
   }
+
   .footer-bottom {
     gap: 15px;
   }
+
   .bottom-left {
-    flex-direction: column; gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 }
