@@ -3,123 +3,74 @@
 .maskgroup {
   position: relative;
   width: 100%;
-  background: url('/image/maskgrup/background.png') no-repeat center bottom;
+  height: 100vh;
+  background: url('/image/maskgrup/Get-In-Touch.png') no-repeat center center;
   background-size: cover;
-  padding: 80px 20px 120px; /* espacio arriba y abajo para que respire */
-  box-sizing: border-box;
-  margin-bottom: -3%;
+  font-family: 'Gabarito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: none;
+  padding: 60px 20px;
 }
 
 .mask-container {
-  max-width: 600px;
-  margin: 0 auto;
+  position: absolute;
+  top: 60.8%;
+  right: 19%;
+  transform: translateY(-50%);
+  width: 420px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 24px; /* espacio entre bloques */
-}
-
-/* icono */
-.mask-container .nave {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 16px;
-}
-
-/* título (imagen) */
-.mask-container .mask-title {
-    position: relative;
-    margin-bottom: 10%;
-  width: 125%;
-  height: auto;
-}
-
-/* inputs lado a lado */
-.info-input {
-  display: flex;
-  width: 100%;
+  border: none;
   gap: 16px;
 }
 
-.info-input .field {
-  font-family: 'Gabarito', sans-serif;
-
-  flex: 1; /* reparten espacio */
+.mask-container .field {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
-.info-input input {
+.mask-container input,
+.mask-container select,
+.mask-container textarea {
   font-family: 'Gabarito', sans-serif;
   padding: 12px 16px;
-  background-color: #cccccc56;
-  font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* selects individuales */
-.select-group {
-  font-family: 'Gabarito', sans-serif;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.select-group select {
-  padding: 12px 16px;
-  font-family: 'Gabarito', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  border: 1px solid #b6b6b6;
-  border-radius: 8px;
-  color: #0056b3;
-  appearance: none;
-  background: rgba(248, 248, 248, 0.699) url('data:image/svg+xml;…') no-repeat right 16px center;
-  background-size: 12px; /* flechita */
-}
-
-/* textarea (mensaje) */
-textarea {
-  font-family: 'Gabarito', sans-serif;
-  width: 100%;
-  min-height: 120px;
-  padding: 16px;
-  font-weight: 100;
   font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.mask-container textarea {
   resize: vertical;
-  box-sizing: border-box;
+  min-height: 100px;
 }
 
-/* botón azul */
 button.cta {
-  font-family: 'Gabarito', sans-serif;
-  width: 100%;
-  max-width: 760px;
-  padding: 16px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 14px;
+  background-color: #007bff;
   color: white;
-  background-color: #007bff; /* el azul llamativo */
+  font-weight: bold;
+  font-size: 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 button.cta:hover {
   background-color: #0056b3;
 }
 
-/* responsive: en móvil apila los inputs */
-@media (max-width: 600px) {
-  .info-input {
-    flex-direction: column;
+/* responsive para pantallas chicas */
+@media (max-width: 768px) {
+  .mask-container {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 95%;
+    margin-top: 30px;
   }
 }
