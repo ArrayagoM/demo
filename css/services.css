@@ -1,279 +1,151 @@
-/* services.css */
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap');
 
-/* —————————————————————————— */
-/* 1. Sección y títulos                   */
-/* —————————————————————————— */
+:root {
+  --c1: #2e9e60; /* verde */
+  --c2: #cd314e; /* rojo fuerte */
+  --c3: #6591dc; /* azul */
+  --c4: #ef7bd6; /* rosa */
+  --c5: #f9893b; /* naranja */
+  --c6: #80deea; /* cian suave */
+  --c7: #e0e0e0; /* gris muy claro */
+}
+
+/* 1) Contenedor general */
 .services {
+  font-family: 'Gabarito', sans-serif;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   background: #fff;
 }
+
 .services h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+
 .services p {
-  font-size: 1rem;
-  color: #888;
-  margin-bottom: 3rem;
+  color: #777;
+  margin-bottom: 2rem;
 }
 
-/* —————————————————————————— */
-/* 2. Grid de 4 columnas x 2 filas        */
-/* —————————————————————————— */
+/* 2) Grid adaptativo */
 .services-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    'big big ads analytics'
-    'social business business analytics';
-  gap: 0.5rem;
-  max-width: 1248px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* —————————————————————————— */
-/* 3. Estilos base de las tarjetas        */
-/* —————————————————————————— */
-.services-container > div {
+/* 3) Tarjeta base */
+.services-card {
   position: relative;
-  border-radius: 0.9rem;
-  overflow: hidden;
+  padding: 2rem 1rem;
+  border-radius: 12px;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1),
+    /* exterior suave */ inset 0 2px 8px rgba(255, 255, 255, 0.6); /* interior leve */
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-}
-.services-container img {
-  display: block;
-  object-fit: contain;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Títulos y párrafos */
-.services-title {
-  font-family: inherit;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0.75rem 0 0.5rem;
-  text-align: left;
-  margin-left: 0;
-}
-.services-parrafo {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0;
-  color: #444;
-  text-align: left;
-  margin-left: 0;
+/* Imagen y título */
+.services-card img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
 
-/* —————————————————————————— */
-/* 4. Tarjeta 1 “Digital Marketing”       */
-/* —————————————————————————— */
-.services-card-1 {
-  grid-area: big;
-  background: linear-gradient(135deg, #00b766 0%, #06a255 100%);
+.services-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* 4) Colores base */
+.color-1 {
+  background-color: rgba(46, 158, 96, 0.1);
+}
+.color-2 {
+  background-color: rgba(205, 49, 78, 0.1);
+}
+.color-3 {
+  background-color: rgba(101, 145, 220, 0.1);
+}
+.color-4 {
+  background-color: rgba(239, 123, 214, 0.1);
+}
+.color-5 {
+  background-color: rgba(249, 137, 59, 0.1);
+}
+.color-6 {
+  background-color: rgba(128, 222, 234, 0.1);
+}
+.color-7 {
+  background-color: rgba(224, 224, 224, 0.5);
+}
+
+/* 5) Hover completo por color (Opción B) */
+.color-1:hover {
+  background-color: var(--c1);
+  box-shadow: 0 12px 24px var(--c1), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  transform: translateY(-4px);
+}
+.color-2:hover {
+  background-color: var(--c2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  transform: translateY(-4px);
+}
+.color-3:hover {
+  background-color: var(--c3);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  transform: translateY(-4px);
+}
+.color-4:hover {
+  background-color: var(--c4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  transform: translateY(-4px);
+}
+.color-5:hover {
+  background-color: var(--c5);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  transform: translateY(-4px);
+}
+.color-6:hover {
+  background-color: var(--c6);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  transform: translateY(-4px);
+}
+.color-7:hover {
+  background-color: var(--c7);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), inset 0px 4px 12px 24px rgba(255, 255, 255, 0.116);
+  transform: translateY(-4px);
+}
+
+/* 6) Zoom imagen y texto blanco */
+.color-1:hover img,
+.color-2:hover img,
+.color-3:hover img,
+.color-4:hover img,
+.color-5:hover img,
+.color-6:hover img,
+.color-7:hover img {
+  transform: scale(1.1);
+}
+
+.color-1:hover h3,
+.color-2:hover h3,
+.color-3:hover h3,
+.color-4:hover h3,
+.color-5:hover h3,
+.color-6:hover h3,
+.color-7:hover h3 {
   color: #fff;
-  padding: 2rem;
-}
-/* glow difuminado extra “tras la tarjeta” */
-.services-card-1::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background: inherit;
-  filter: blur(20px);
-
-}
-.services-card-1 .services-title {
-  width: 50%;
-  font-family: 'Gabarito', sans-serif;
-  font-size: 35px;
-  font-weight: 900;
-}
-.services-card-1 .services-parrafo {
-  position: relative;
-  width: 57%;
-  top: 10%;
-  margin-right: 160px;
-  color: rgb(230, 222, 222);
-  opacity: 0.9;
-}
-
-/* imagen en la esquina inferior derecha */
-.services-card-1 img {
-  position: absolute;
-  bottom: 1rem;
-  right: -0.5rem;
-  width: 250px;
-  height: 250px;
-}
-
-/* hover sombra fuerte */
-.services-card-1:hover {
-  box-shadow: 0 0 40px 10px rgba(0, 183, 102, 0.6);
-}
-
-/* —————————————————————————— */
-/* 5. Tarjeta 2 “Advertisements”          */
-/* —————————————————————————— */
-.services-card-2 {
-  grid-area: ads;
-  background: #ffe5e5;
-  color: #111;
-  padding: 1.5rem;
-  align-items: center;
-  text-align: center;
-}
-.services-card-2 img {
-  width: 180px;
-  position: relative;
-  left: -15%;
-  margin: 0 auto 0.5rem;
-}
-.services-card-2 .services-title {
-  position: relative;
-  top: 15%;
-  font-family: 'Gabarito', sans-serif;
-  font-size: 40px;
-  font-weight: 900;
-}
-.services-card-2:hover {
-  box-shadow: 0 0 30px 6px rgba(255, 100, 100, 0.5);
-}
-
-/* —————————————————————————— */
-/* 6. Tarjeta 3 “Analytics”                */
-/* —————————————————————————— */
-.services-card-3 {
-  grid-area: analytics;
-  background: #fff0e5;
-  color: #111;
-  padding: 1.5rem;
-}
-.services-card-3 img {
-  width: 130px;
-  margin-bottom: 0.5rem;
-}
-.services-card-3 .services-title {
-  font-family: 'Gabarito', sans-serif;
-  font-size: 40px;
-  font-weight: 900;
-}
-.services-card-3 .services-parrafo {
-  margin-top: 9.9rem;
-}
-.services-card-3:hover {
-  box-shadow: 0 0 30px 6px rgba(131, 58, 180, 0.5);
-}
-
-/* —————————————————————————— */
-/* 7. Tarjeta 4 “Social Media Services”    */
-/* —————————————————————————— */
-.services-card-4 {
-  grid-area: social;
-  background: #e5f0ff;
-  color: #111;
-  /* padding: 1.9rem; */
-  align-items: center;
-  text-align: center;
-}
-.services-logo {
-  position: relative;
-  left: -25%;
-  top: 15%;
-}
-.services-card-4 img {
-  width: 100px;
-  margin: 0 auto 0.5rem;
-}
-.services-card-4 .services-title {
-  position: relative;
-  top: 15%;
-  left: 10%;
-  font-family: 'Gabarito', sans-serif;
-  font-size: 40px;
-  font-weight: 900;
-}
-.services-card-4:hover {
-  box-shadow: 0 0 30px 6px rgba(0, 153, 255, 0.5);
-}
-
-/* —————————————————————————— */
-/* 8. Tarjeta 5 “Business Consultancy”     */
-/* —————————————————————————— */
-.services-card-5 {
-  grid-area: business;
-  background: #fdf0f5;
-  color: #111;
-  padding: 2rem;
-}
-.services-card-5 .services-title {
-  font-family: 'Gabarito', sans-serif;
-  font-size: 35px;
-  font-weight: 900;
-  margin-bottom: 0.5rem;
-}
-.services-card-5 .services-parrafo {
-  margin-top: 4%;
-  margin-right: 220px;
-}
-.services-card-5 img {
-  position: absolute;
-  top: 25%;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  width: 150px;
-  height: auto;
-  opacity: 0.9;
-}
-.services-card-5:hover {
-  box-shadow: 0 0 30px 6px rgba(255, 153, 0, 0.5);
-}
-
-/* —————————————————————————— */
-/* 9. Responsive                         */
-/* —————————————————————————— */
-@media (max-width: 1024px) {
-  .services-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      'big big'
-      'ads analytics'
-      'social business';
-  }
-  /* ajustamos márgenes de párrafos para móviles */
-  .services-card-1 .services-parrafo,
-  .services-card-5 .services-parrafo {
-    margin-right: 0;
-  }
-}
-@media (max-width: 768px) {
-  .services-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas:
-      'big'
-      'ads'
-      'analytics'
-      'social'
-      'business';
-  }
-  .services-container > div {
-    text-align: center;
-    align-items: center;
-  }
-  .services-card-1 img,
-  .services-card-5 img {
-    position: static;
-    margin: 1rem auto 0;
-  }
 }
