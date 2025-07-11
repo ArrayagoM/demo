@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&display=swap');
+
+.section-container {
+  font-family: 'Gabarito', sans-serif;
+  height: 95%;
+  width: 100%;
+}
+
+.title-container {
+    margin-top: 2%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 18%;
+}
+.title-container h1 {
+  position: relative;
+  margin-top: 0%;
+  font-weight: 500;
+}
+.title-container h3 {
+  color: rgba(127, 127, 127, 1);
+  font-size: 15px;
+  font-weight: 50;
+}
+
+.menu-container {
+    color: rgba(15, 108, 216, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  gap: 1px;
+  margin-top: 2%;
+}
+
+.menu-container span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+}
+
+.info-container {
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.card-info{
+    position: inherit;
+    border: 1px solid black;
+    width: 635px;
+    height: 360px;
+}

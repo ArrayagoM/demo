@@ -1,0 +1,58 @@
+/* error.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gabarito', sans-serif;
+  background: linear-gradient(135deg, #f8f8f8, #dbefff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-box {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 3rem 2rem;
+  max-width: 400px;
+  margin: auto;
+  transition: transform 0.3s;
+}
+
+.error-box:hover {
+  transform: scale(1.01);
+}
+
+.error-box h1 {
+  color: #0f6cd8;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.error-box p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0f6cd8;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #094a9c;
+}
