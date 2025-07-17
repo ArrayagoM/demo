@@ -40,7 +40,6 @@
   font-stretch: condensed;
 }
 
-
 .Our {
   margin-top: 20%;
   color: rgba(255, 255, 255, 0.562);
@@ -93,121 +92,113 @@
   font-size: 0.9rem;
   color: #777;
 } */
+.cards {
+  width: 100%;
+  background: white;
+  padding: 40px 0;
+}
 
-/* 3. Grid de tarjetas */
-.services-grid {
-  background-color: white;
-  margin-top: 11%;
+.cards-inner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0 2rem;
+  gap: 10px;
+  width: 100%;
+}
+
+.scards-title {
+  position: relative;
+  left: -15%;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1d1d1f;
+  text-align: center;
+}
+
+/* Contenedor de cada tarjeta */
+.crad-conten {
+  width: 100%;
+  display: flex;
   justify-content: center;
 }
 
-/* 4. Tarjeta individual */
-.service-card {
-  display: none;
-  margin-top: -3%;
-  width: 700px;
-  height: 350px;
-  background: #fff;
-  /* Eliminamos el border-color normal */
-  border: 2px solid transparent;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.5s;
-
-  border-image-source: linear-gradient(
-    to bottom,
-    #e0e0e09c 35%,
-    #e0e0e06e 50%,
-    #e0e0e01f 75%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-image-slice: 1;
+/* Tarjeta individual */
+.cards-item {
+  width: 100%;
+  background-color: #fdfcfc;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* 4.1 Título dentro de tarjeta */
-.service-card h3 {
-  font-size: 2.1rem;
-  margin-bottom: 1rem;
-  color: #222;
+.cards-item:hover {
+  background-color: #f9f9f9;
 }
 
-/* 4.2 Lista */
-.service-card ul {
-  list-style: none;
-  padding: 0;
-}
-.service-card li {
-  margin-bottom: 0.6rem;
-  font-size: 1.3rem;
-  line-height: 1.4;
-  color: #444;
-  position: relative;
-  padding-left: 1.2rem;
-}
-.service-card li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #17a2b8;
-  font-size: 1.2rem;
-  line-height: 1;
+/* Header de la tarjeta */
+.cards-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 18px 24px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
-/* 5. Animación al hacer scroll (clase que JS añade) */
-.service-card.show {
-  opacity: 1;
-  transform: none;
+/* Icono */
+.cards-header .icon {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
-/* 6. Hover en tarjeta – reemplaza por esto */
-.service-card:hover {
-  transition: 0.5s;
-  transform: translateY(-5px) scale(1.05) !important;
-  opacity: 1 !important;
-  border-radius: 0%;
-  border: 2px solid rgba(0, 0, 0, 0.267);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.411) !important;
+/* Título */
+.cards-header .title {
+  flex-grow: 1;
+  color: #1d1d1f;
+  font-weight: 500;
 }
 
-/* 7. Delay personalizado */
-.service-card[data-delay='0'] {
-  transition-delay: 0.1s;
-}
-.service-card[data-delay='100'] {
-  transition-delay: 0.2s;
-}
-.service-card[data-delay='200'] {
-  transition-delay: 0.3s;
-}
-.service-card[data-delay='300'] {
-  transition-delay: 0.4s;
-}
-.service-card[data-delay='400'] {
-  transition-delay: 0.5s;
-}
-.service-card[data-delay='500'] {
-  transition-delay: 0.6s;
-}
-.service-card[data-delay='600'] {
-  transition-delay: 0.7s;
-}
-.service-card[data-delay='700'] {
-  transition-delay: 0.8s;
+/* Flechita */
+.chevron {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #999;
+  stroke-width: 2;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
 }
 
-/* 8. Media query para títulos más chicos en móvil */
-@media (max-width: 600px) {
-  .services-header h2 {
-    font-size: 2rem;
-  }
+.cards-item.active .chevron {
+  transform: rotate(180deg);
+  stroke: #222;
+}
+
+/* Contenido colapsable */
+.cards-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 24px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.cards-item.active .cards-content {
+  max-height: 500px;
+  padding: 0 24px 18px 24px;
+}
+
+/* 💥 ESTO ES LO QUE LO CENTRA como en la imagen */
+.cards-header,
+.cards-content {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
