@@ -6,15 +6,20 @@
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/maskgroup.css" />
     <link rel="stylesheet" href="/css/digital.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unisphere</title>
   </head>
-  <body>
-    <nav class="nav-container">
+  <body class="digital-page">
+    <nav class="nav-container" style="background-color: rgba(240, 248, 255, 0)">
       <div class="nav-conten">
         <div class="nav-img-logo">
           <a href="index.html">
-            <img class="logo-unis" src="./image/navbar/logoverde.png" alt="Logo-Unisphere" />
+            <img class="logo-unis" src="./image/navbar/logo(blck).png" alt="Logo-Unisphere" />
           </a>
         </div>
 
@@ -36,19 +41,25 @@
 
         <div class="nav-social">
           <a class="nav-link" href="error.html"
-            ><span style="color: rgba(15, 108, 216, 1)">Contact Us</span></a
+            ><span style="color: black !important">Contact Us</span></a
           >
         </div>
       </div>
     </nav>
     <section class="services">
       <div class="services-header">
-        <h2 class="digital-title">Digital Marketing Strategy</h2>
+        <div class="strategi">
+          <h1 class="slanted">Strategies that click.</h1>
+        </div>
+        <h3 class="Our">Our Services</h3>
+        <h2 class="digital-title">Digital Marketing</h2>
         <p class="digital-p">
-          We can provide a wide range of services in crafting and executing a digital marketing
-          strategy for you.
+          We don't just run ads-we craft intelligent, data-powered digital marketing campaigns that
+          speak to your audience and spark action. Whether you're looking to build awareness,
+          increase traffic, or drive conversions, we blend creativity with strategy to deliver
+          results that matter. From SEO magic to scroll-stopping video ads, we've got every corner
+          of digital covered.
         </p>
-        <span class="digital-span">Here’s a breakdown of key services offered:</span>
       </div>
       <div class="services-grid">
         <div class="service-card hidden" data-delay="0">
@@ -180,6 +191,13 @@
       </form>
     </section>
     <div id="import-footer"></div>
+    <script>
+      document.querySelectorAll('.service-card').forEach((card) => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('show');
+        });
+      });
+    </script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('quoteForm');
