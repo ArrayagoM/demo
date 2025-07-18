@@ -261,3 +261,19 @@
   animation: zoomIn 1s ease forwards;
   animation-delay: 0.5s;
 }
+
+.text-conten{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: baseline;
+}
+
+.texte-title{
+color: #1d1d1f85;
+}
+.text-p{
+  text-align: center;
+  width: 80%;
+color: #1d1d1f85;
+}
